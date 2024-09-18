@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signal Demo</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 20px; text-align: center;">
+    <h1 style="color: #333; font-size: 24px; margin-bottom: 20px;">Signal Trigger Test</h1>
+    
+    <form action="{% url 'trigger_signal' %}" method="get" style="margin-bottom: 10px;">
+        <button type="submit" style="background-color: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">Question 1</button>
+    </form>
+     <h1 style="color: #333; font-size: 24px; margin-bottom: 20px;">Do django signals run in the same thread as the caller? </h1>
+
+    <form action="{% url 'trigger_thread_signal' %}" method="get" style="margin-bottom: 10px;">
+        <button type="submit" style="background-color: #28a745; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">Question 2</button>
+    </form>
+
+     <h1 style="color: #333; font-size: 24px; margin-bottom: 20px;">By default do django signals run in the same database transaction as the caller? </h1>
+
+    <form action="{% url 'test_transaction_signal' %}" method="get" style="margin-bottom: 10px;">
+        <button type="submit" style="background-color: #ffc107; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">Question 3</button>
+    </form>
+    <h1 style="color: #333; font-size: 24px; margin-bottom: 20px;">Custom Class </h1>
+    <form action="{% url 'rectangle_view' %}" method="get" style="margin-bottom: 10px;">
+        <button type="submit" style="background-color: #dc3545; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">Rectangle Class</button>
+    </form>
+</body>
+</html>
